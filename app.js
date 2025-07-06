@@ -7,13 +7,15 @@ let finalScore=0;
 let h2 = document.querySelector("h2");
 let p=document.querySelector("p");
 let colors = ["red", "yellow", "green", "purple"];
-document.addEventListener("keypress", function () {
-  if (started === false) {
+function main(){
+ if (started === false) {
     console.log("game is started");
     started = true;
     levelUp();
   }
-});
+}
+document.addEventListener("touchstart",main);
+document.addEventListener("keypress", main);
 function levelUp() {
   userSeq=[];
   level++;
